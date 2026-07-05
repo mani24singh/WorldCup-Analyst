@@ -20,10 +20,13 @@
 
 ![Status](https://img.shields.io/badge/Status-Active-brightgreen?style=flat-square)
 ![API](https://img.shields.io/badge/API-Free%20Tier-success?style=flat-square)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Streamlit-FF4B4B?style=flat-square&logo=streamlit&logoColor=white)](https://wordcup-analyst-2026.streamlit.app/)
 
 <br>
 
 *Ask one question. Three agents gather data in parallel. One synthesizer writes the briefing.*
+
+**Live app:** [https://wordcup-analyst-2026.streamlit.app/](https://wordcup-analyst-2026.streamlit.app/)
 
 </div>
 
@@ -35,6 +38,7 @@ Ask a single question — *"Give me a briefing on Brazil's next match"* — and 
 
 ## Table of Contents
 
+- [Live Demo](#live-demo)
 - [Overview](#overview)
 - [Features](#features)
 - [Tech Stack](#tech-stack)
@@ -47,6 +51,26 @@ Ask a single question — *"Give me a briefing on Brazil's next match"* — and 
 - [Project Structure](#project-structure)
 - [Rate Limits](#rate-limits)
 - [Troubleshooting](#troubleshooting)
+
+---
+
+## Live Demo
+
+Try the app in your browser (BYOK — bring your own API keys):
+
+**[https://wordcup-analyst-2026.streamlit.app/](https://wordcup-analyst-2026.streamlit.app/)**
+
+| Main dashboard | Sample briefing output |
+|----------------|------------------------|
+| ![Main dashboard](app/image/Output-1.png) | ![Sample briefing](app/image/Output-2.png) |
+
+*Left: query panel, API credentials, and generate flow. Right: Brazil vs Norway briefing with form, key player, and news sections.*
+
+### Run locally
+
+```bash
+streamlit run streamlit_app.py
+```
 
 ---
 
@@ -195,7 +219,15 @@ TAVILY_API_KEY=                   # optional — leave empty to use RSS only
 
 ## Usage
 
-### Generate a briefing
+### Streamlit UI
+
+```bash
+streamlit run streamlit_app.py
+```
+
+Open the sidebar, add your Groq and Football Data keys (download the setup guide from the app), ask a question, and click **Generate briefing**. Briefings download as `.docx`.
+
+### Generate a briefing (CLI)
 
 **Git Bash / macOS / Linux:**
 
