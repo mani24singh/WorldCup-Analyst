@@ -7,18 +7,17 @@
 <br>
 
 ![Python](https://img.shields.io/badge/Python-3.12%2B-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![Jupyter](https://img.shields.io/badge/Jupyter-Notebook-F37626?style=for-the-badge&logo=jupyter&logoColor=white)
 ![LangChain](https://img.shields.io/badge/LangChain-1.4-1C3C3C?style=for-the-badge&logo=langchain&logoColor=white)
-![LangGraph](https://img.shields.io/badge/LangGraph-1.2-F59E0B?style=for-the-badge&logo=langgraph&logoColor=white)
-![RAG](https://img.shields.io/badge/RAG-Retrieval-22C55E?style=for-the-badge)
-![Multi-Agent](https://img.shields.io/badge/Multi--Agent-Orchestration-8B5CF6?style=for-the-badge)
+![LangGraph](https://img.shields.io/badge/LangGraph-1.2-F59E0B?style=for-the-badge)
 ![Groq](https://img.shields.io/badge/Groq-Llama-F55036?style=for-the-badge)
+![Multi-Agent](https://img.shields.io/badge/Multi--Agent-Orchestration-8B5CF6?style=for-the-badge)
 ![Pydantic](https://img.shields.io/badge/Pydantic-2.x-E92063?style=for-the-badge&logo=pydantic&logoColor=white)
 ![httpx](https://img.shields.io/badge/httpx-Async-5A67D8?style=for-the-badge)
+![feedparser](https://img.shields.io/badge/feedparser-RSS-00ADD8?style=for-the-badge)
+![Tavily](https://img.shields.io/badge/Tavily-Search-0EA5E9?style=for-the-badge)
 
 <br>
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square)](LICENSE)
 ![Status](https://img.shields.io/badge/Status-Active-brightgreen?style=flat-square)
 ![API](https://img.shields.io/badge/API-Free%20Tier-success?style=flat-square)
 
