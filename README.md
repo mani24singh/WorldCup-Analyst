@@ -1,6 +1,6 @@
 <div align="center">
 
-# WordCup-Analyst
+# WorldCup-Analyst
 
 **Parallel multi-agent FIFA World Cup match-day briefings**
 
@@ -20,10 +20,13 @@
 
 ![Status](https://img.shields.io/badge/Status-Active-brightgreen?style=flat-square)
 ![API](https://img.shields.io/badge/API-Free%20Tier-success?style=flat-square)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Streamlit-FF4B4B?style=flat-square&logo=streamlit&logoColor=white)](https://worldcup-analyst-2026.streamlit.app/)
 
 <br>
 
 *Ask one question. Three agents gather data in parallel. One synthesizer writes the briefing.*
+
+**Live app:** [https://worldcup-analyst-2026.streamlit.app/](https://worldcup-analyst-2026.streamlit.app/)
 
 </div>
 
@@ -35,6 +38,7 @@ Ask a single question — *"Give me a briefing on Brazil's next match"* — and 
 
 ## Table of Contents
 
+- [Live Demo](#live-demo)
 - [Overview](#overview)
 - [Features](#features)
 - [Tech Stack](#tech-stack)
@@ -50,9 +54,29 @@ Ask a single question — *"Give me a briefing on Brazil's next match"* — and 
 
 ---
 
+## Live Demo
+
+Try the app in your browser (BYOK — bring your own API keys):
+
+**[https://worldcup-analyst-2026.streamlit.app/](https://worldcup-analyst-2026.streamlit.app/)**
+
+| Main dashboard | Sample briefing output |
+|----------------|------------------------|
+| ![Main dashboard](app/image/Output-1.png) | ![Sample briefing](app/image/Output-2.png) |
+
+*Left: query panel, API credentials, and generate flow. Right: Brazil vs Norway briefing with form, key player, and news sections.*
+
+### Run locally
+
+```bash
+streamlit run streamlit_app.py
+```
+
+---
+
 ## Overview
 
-WordCup-Analyst is a command-line research assistant for the FIFA World Cup. A **supervisor** routes the user's question and resolves the next fixture once. Three **worker agents** then gather complementary data in parallel. A **synthesizer** writes the final reader-facing briefing.
+WorldCup-Analyst is a command-line research assistant for the FIFA World Cup. A **supervisor** routes the user's question and resolves the next fixture once. Three **worker agents** then gather complementary data in parallel. A **synthesizer** writes the final reader-facing briefing.
 
 The design follows the multi-agent orchestration pattern used in production research tools: delegate sub-questions to specialists, merge answers, keep the user interface simple.
 
@@ -146,7 +170,7 @@ User Query
 
 ```bash
 git clone <your-repo-url>
-cd WordCup-Analyst
+cd WorldCup-Analyst
 ```
 
 **Using uv (recommended):**
@@ -195,7 +219,15 @@ TAVILY_API_KEY=                   # optional — leave empty to use RSS only
 
 ## Usage
 
-### Generate a briefing
+### Streamlit UI
+
+```bash
+streamlit run streamlit_app.py
+```
+
+Open the sidebar, add your Groq and Football Data keys (download the setup guide from the app), ask a question, and click **Generate briefing**. Briefings download as `.docx`.
+
+### Generate a briefing (CLI)
 
 **Git Bash / macOS / Linux:**
 
@@ -271,7 +303,7 @@ Exits `0` on `VERIFICATION PASSED`, `1` on failure.
 ## Project Structure
 
 ```
-WordCup-Analyst/
+WorldCup-Analyst/
 ├── app/
 │   ├── config.py              # Settings and LLM model factories
 │   ├── state.py                 # AnalystState + Finding reducer
@@ -327,8 +359,3 @@ Upgrading to paid API tiers does not require architectural changes.
 | `VERIFICATION FAILED` on first run | Check API keys; wait 60s if football-data rate-limited |
 
 ---
-
-## Further Reading
-
-- `PROJECT_GAP_ANALYSIS.md` — step-by-step build checklist
-- `Build_a_Parallel_Multi-Agent_World_Cup_Analyst_in_60_Minutes.pdf` — full architecture guide
